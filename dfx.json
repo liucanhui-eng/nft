@@ -1,7 +1,7 @@
 {
   "canisters": {
     "nft_backend": {
-      "main": "src/nft_backend/main.mo",
+      "main": "src/nft_backend/icrc7.mo",
       "type": "motoko"
     },
     "nft_frontend": {
@@ -16,6 +16,17 @@
         "dist/nft_frontend/"
       ],
       "type": "assets"
+    },
+    "internet_identity": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "frontend": {}
     }
   },
   "defaults": {

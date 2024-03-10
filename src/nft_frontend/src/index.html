@@ -1,24 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>nft</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>hello</title>
+  <base href="/" />
+  <link rel="icon" href="favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <!-- Minified version -->
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+  <!-- Un-Minified version -->
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+
+<body>
+
+  <div class="tabs">
+    <button class="tab-btn" data-tab="tab1">查询NFT</button>
+    <button class="tab-btn" data-tab="tab2">铸造NFT</button>
+    <button class="tab-btn" data-tab="tab3">whoami</button>
+    <div class="tab-content">
+      <div class="tab-pane" id="tab3">
+        <label id="who"></label>
+        <button id="whoami">我是谁</button>  
+      </div>
+      <div class="tab-pane" id="tab1">
+        <table>
+          <tr>
+            <td>图片</td>
+            <td id="image"></td>
+          </tr>
+          <tr>
+            <td>vft信息</td>
+            <td id="vftInfo"></td>
+          </tr>
+          <tr>
+            <td>vft数量</td>
+            <td id="vftCount"></td>
+          </tr>
+          <tr>
+            <td>vft更新时间</td>
+            <td id="VFTUpdateTime"></td>
+          </tr>
+          <tr>
+            <td>用户ID</td>
+            <td id="userId"></td>
+          </tr>
+          <tr>
+            <td>钱包地址</td>
+            <td id="walletAddress"></td>
+          </tr>
+          <tr>
+            <td>铸币时间</td>
+            <td id="mintTime">
+              <image id="image_mintTime"></image>
+            </td>
+          </tr>
+        </table>
+        <main>
+          <br />
+          <form action="#" ,id="form1">
+            <label for="input_user_id">输入用户ID: &nbsp;</label>
+            <input id="input_user_id" alt="Name" type="text" />
+            <button type="submit">点击查询!</button>
+          </form>
+          <section id="greeting"></section>
+        </main>
+      </div>
+      <div class="tab-pane" id="tab2" style="display:none;" width="30%">
+        <main>
+          <form action="#">
+            <label for="_vftCount">vftCount: &nbsp;</label>
+            <input id="_vftCount" alt="_vftCount" type="text" placeholder="vft 数量" /><br>
+
+            <label for="_vftInfo">vftInfo: &nbsp;</label>
+            <input id="_vftInfo" alt="_vftInfo" type="text" /><br>
+
+            <label for="_user">用户ID: &nbsp;</label>
+            <input id="_user" alt="_user" type="text" /><br>
+
+            <label for="_vftUserId">vft用户ID: &nbsp;</label>
+            <input id="_vftUserId" alt="_vftUserId" type="text" /><br>
+
+            <label for="_reputationPoint">信誉值: &nbsp;</label>
+            <input id="_reputationPoint" alt="_reputationPoint" type="text" /><br>
+
+            <label for="_walletAddress">钱包地址: &nbsp;</label>
+            <input id="_walletAddress" alt="_walletAddress" type="text" /><br>
+
+            <label for="_SBTGetTime">SBT获取时间: &nbsp;</label>
+            <input id="_SBTGetTime" alt="_SBTGetTime" type="datetime-local" /><br>
+
+            <label for="_SBTMembershipCategory">会员类型: &nbsp;</label>
+            <select id="_SBTMembershipCategory" alt="会员类型" type="text">
+              <optgroup label="选择会员类型">
+                <option value="1"> 发电卡</option>
+                <option value="2"> 闪电卡</option>
+                <option value="3"> 雷电卡</option>
+              </optgroup>
+
+            </select>
+
+            <label for="_STBCardImage">图片地址: &nbsp;</label>
+            <input id="_STBCardImage" alt="图片地址" type="text" /><br>
+
+            <button id="form2" type="button">点击铸币!</button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
