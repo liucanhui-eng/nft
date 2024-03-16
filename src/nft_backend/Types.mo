@@ -45,6 +45,16 @@ module {
     #TransferNotification;
   };
 
+  public func getSBTCardLevel(cardType : Text) : Nat {
+    switch (cardType) {
+      case ("AIRDROP") { return 1 };
+      case ("BATTERY") { return 2 };
+      case ("LIGHTING") { return 3 };
+      case ("THUNDER") { return 4 };
+      case _ { return 0 };
+    };
+  };
+
   public type LogoResult = {
     logo_type : Text;
     data : Text;
@@ -93,7 +103,7 @@ module {
 
   public type MetadataPart = {
     purpose : MetadataPurpose;
-    key_val_data : [MetadataKeyVal];
+    key_val_data : [var MetadataKeyVal];
     data : Blob;
   };
 
