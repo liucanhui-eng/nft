@@ -287,7 +287,7 @@ shared actor class ICRC7NFT(custodian : Principal) = Self {
     };
   };
 
-  public query func clean() : async () {
+  public shared func clean() : async () {
     nfts := List.nil<Types.Nft>();
   };
 
